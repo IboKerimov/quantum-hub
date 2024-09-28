@@ -1,0 +1,160 @@
+.userProfile{
+    padding: 20px;
+}
+
+.userProfile .accIn{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+.userProfile .accIn .top{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+
+.userProfile .accIn .top .top-left{
+    display: flex;
+    align-items: flex-start;
+}
+.userProfile .accIn .top .top-left img{
+    width: 90px;
+    border-radius: 100%;
+    border: 2px solid blue;
+    position: relative; 
+}
+.userProfile .accIn .top .top-left img:hover{
+    filter: blur(1px);
+}
+.userProfile .accIn .top .top-left span{
+    color: white;
+    background: rgb(56, 103, 186);
+    width: 20px;
+    height: 20px;
+    border-radius: 5px;
+    font-size: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-left: -3px;
+}
+
+
+.userProfile .accIn .top .top-right {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+.userProfile .accIn .top .top-right h1{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    color: rgb(52, 92, 162);
+}
+.userProfile .accIn .top .top-right button{
+    border: 0;
+    outline: 0;
+    color: white;
+    width: 19px;
+    height: 19px;
+    background-color: rgb(56, 103, 186);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 9px;
+}
+.userProfile .accIn .top .top-right p{
+    color: rgb(52, 92, 162);
+    font-weight: 500;
+}
+
+
+@media screen and (max-width: 500px) {
+    .userProfile .accIn .top .top-left img{
+        width: 60px;
+    }
+    .userProfile .accIn .top .top-left span{
+        width: 15px;
+        height: 15px;
+        font-size: 8px;
+    }
+    .userProfile .accIn .top .top-right h1{
+        font-size: 26px;
+    }
+    .userProfile .accIn .top .top-right p{
+        font-size: 13px;
+    }
+}
+
+
+/* Image Change */
+
+.userProfile .imgChange{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: #00000066;
+    visibility: hidden;
+    opacity: 0;
+    transition: 0.2s;
+    z-index: 9999;
+}
+.userProfile .imgChangeOpen{
+    visibility: visible;
+    opacity: 1;
+}
+.userProfile .imgChange .imgIn{
+    background: white;
+    border-radius: 10px;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 14px;
+}
+.userProfile .imgChange .imgIn h1{
+    color: rgb(56, 103, 186);
+    font-size: 25px;
+}
+.userProfile .imgChange .imgIn input{
+    border: 2px solid #1f70c6;
+    outline: none;
+    border-radius: 8px;
+    width: 300px;
+    height: max-content;
+    font-size: 13px;
+    font-weight: 500;
+    background: white;
+    padding: 8px 0vh 8px 1vh;
+}
+.userProfile .imgChange .imgIn input::-webkit-file-upload-button{
+    background: rgb(56, 103, 186);
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+.userProfile .imgChange .imgIn button{
+    border: 0;
+    outline: none;
+    background: #0056b3;
+    color: white;
+    font-size: 14px;
+    font-weight: 600;
+    padding: 8px 10px;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.userProfile .imgChange .imgIn button:hover{
+    opacity: 0.9;
+}

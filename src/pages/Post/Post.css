@@ -1,0 +1,92 @@
+.PostGeneral {
+    padding: 20px;
+}
+
+.PostGeneral hr{
+    margin: 10px 0 20px 0;
+}
+.PostGeneral .head span {
+    font-size: 14px;
+}
+
+.PostGeneral .head h1 {
+    font-size: 30px;
+    font-weight: 650;
+    margin-top: 2px;
+}
+
+.PostGeneral .content {
+    display: flex;
+    margin-top: 10px;
+}
+
+.PostGeneral .content p {
+    font-weight: 450;
+    flex: 1; /* Allows the paragraph to take remaining space */
+}
+
+.PostGeneral .content a {
+    text-decoration: none;
+    transition: 0.15s;
+    color: rgb(43, 77, 214);
+}
+
+.PostGeneral .content ul li {
+    margin: 5px 20px;
+    list-style-type: disc;
+}
+.PostGeneral .content img {
+    margin-left: 4.5px;
+    margin-bottom: 10px;
+    width: 500px;
+    height: 350px;
+    border-radius: 5px;
+    object-fit: cover;
+    float: right;
+}
+
+
+.PostGeneral .content audio{
+    width: 60%;
+    margin: 8px 0;
+}
+
+.pxBeVisible{
+    display: none;
+}
+
+@media screen and (max-width: 1000px) {
+    .PostGeneral .content img {
+        width: 400px;
+        height: 250px;
+    }
+    .PostGeneral .content audio{
+        width: 80%;
+    }
+}
+
+@media screen and (max-width: 680px) {
+    .PostGeneral .content {
+        flex-direction: column-reverse; /* Stack image below text on small screens */
+    }
+
+    .pxBeVisible{
+        display: unset;
+    }
+
+    .pxVanish{
+        display: none;
+    }
+
+    .PostGeneral .content img {
+        width: 100%;
+        height: auto;
+        object-fit: cover;
+        max-height: 200px;
+        margin-left: 0; /* Reset margin */
+    }
+
+    .PostGeneral .content audio{
+        width: 100%;
+    }
+}

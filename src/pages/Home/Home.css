@@ -1,0 +1,76 @@
+/* Home Header styling */
+
+.Home header{
+    height: 50vh;
+    display: grid;
+    place-items: center;
+    background-image: url(../../images/background.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.Home header .header-in{
+    text-align: center;
+}
+.Home header .header-in h1{
+    color: rgb(125, 196, 244);
+    font-size: 36px;
+}
+.Home header .header-in a{
+    color: rgb(125, 196, 244);
+    font-size: 36px;
+}
+.Home header .header-in h1 span{
+    color: white;
+}
+.Home header .header-in p{
+    color: white;
+    font-size: 25px;
+    font-weight: 500;
+    margin: 7px 0;
+}
+
+@media screen and (max-width: 470px){
+    .Home header .header-in h1,
+    .Home header .header-in a{
+        font-size: 29px;
+    }
+    .Home header .header-in p{
+        font-size: 22px;
+    }
+}
+
+
+/* Posts */
+
+.not-class{
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+
+main .posts-menu{
+    display: flex;
+    padding: 10px;
+    justify-content: space-between;
+    align-items: center;
+}
+main .posts-menu h1{
+    margin-bottom: 5px;
+    color: rgb(34, 88, 214);
+}
+main .posts-menu a{
+    color: rgb(35, 109, 159);
+}
+
+@media screen and (max-width: 520px){
+    main .posts-menu{
+        padding: 5px;
+        margin-bottom: 5px;
+    }
+    main .posts-menu h1{
+        font-size: 24px;
+    }
+    main .posts-menu a{
+        font-size: 13px;
+    }
+}

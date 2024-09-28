@@ -1,0 +1,15 @@
+.all-posts header{
+    height: 40vh;
+    background-image: url(../../images/bg-allposts.jpg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: grid;
+    place-items: center;
+}
+.all-posts header h1{
+    color: rgb(166, 216, 250);
+    font-size: 45px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}

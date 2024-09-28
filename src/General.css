@@ -1,0 +1,264 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: "Montserrat", sans-serif;
+}
+
+body{
+    padding-top: 100px;
+}
+@media screen and (max-width: 630px){
+    body{
+        padding-top: 80px;
+    }
+}
+
+.btn-active:active{ transition: .1s; }
+.btn-active:active{
+    transform: translateY(5px);
+}
+
+
+main{
+    padding: 15px;
+}
+
+main .posts{
+    display: flex;
+    gap: 20px;
+    flex: 1;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.post{
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+    border-radius: 13px;
+    padding: 13px;
+    display: flex;
+    flex-direction: column;
+    min-width: 260px;
+    max-width: 260px;
+    height: 365px;
+}
+.post .top{
+    text-align: center;
+}
+.post .top img{
+    width: 100%;
+    border-radius: 10px;
+    height: 140px;
+    object-fit: cover;
+}
+.post .top .title{
+    font-weight: 650; 
+    font-size: 25px; 
+    color: #3c352d;
+}
+.post .top .category{
+    font-weight: 600;
+    font-size: 12px;
+    text-transform: uppercase;
+    color: #4f4a44;
+}
+.post .bottom{
+    text-align: center;
+    height: 100%;
+    justify-content: space-between;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+}
+.post .bottom p{
+    font-size: 13px;
+    font-weight: 400;
+    margin: 7px 0;
+}
+.post a{
+    color: #000;
+}
+.post .read-all {
+    display: inline-block;
+    padding: 7px 16px;
+    background-color: #007bff;
+    color: white;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s ease;
+    font-size: 14px;
+    width: 130px;
+    align-self: center;
+}
+
+.post .read-all:hover {
+    background-color: #0056b3;
+}
+
+
+.refreshFilters{
+    display: flex;
+    text-decoration: none;
+    border: 0;
+    outline: none;
+    color: white;
+    font-size: 14px;
+    font-weight: 500;
+    background: rgb(24, 143, 222);
+    border-radius: 3px;
+    padding: 7px 11px;
+    width: max-content;
+    transition: .15s;
+    cursor: pointer;
+
+}
+.refreshFilters:hover{
+    background: rgb(24, 112, 170);
+}
+
+
+
+
+
+
+
+
+.outerForm {
+    display: flex;
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-image: url(./images/logsignimg.jpg);
+    background-repeat: no-repeat;
+    object-fit: cover;
+    background-size: cover;
+}
+@media screen and (max-width: 500px){
+    .outerForm{
+        height: calc(100vh - 80px);
+    }
+}
+
+.outerForm form {
+    width: 600px;
+    padding: 30px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    background-color: white;
+    border-top-right-radius: 20px;
+    border-bottom-right-radius: 20px;
+    display: flex;
+    align-items: center;
+    border-right: 10px solid rgb(82, 138, 202);
+}
+
+.outerForm .img {
+    display: flex;
+    max-height: 100vh;
+}
+
+.outerForm .img img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+.outerForm form .formIn{
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    width: 90%;
+}
+.outerForm form .formIn h1{
+    color: #1660b0;
+    font-size: 45px;
+    margin-bottom: 10px;
+}
+.outerForm form .formIn input{
+    border: 2px solid #1f70c6;
+    outline: none;
+    border-radius: 8px;
+    width: 100%;
+    height: 43px;
+    font-size: 16px;
+    font-weight: 500;
+    background: white;
+    padding-left: 5vh;
+}
+.outerForm form .formIn input.name {
+    background: url(./images/user.svg);
+    background-position: left 10px center;
+    background-repeat: no-repeat;
+    background-size: 18px;
+
+}
+.outerForm form .formIn input.email {
+    background: url(./images/email.svg);
+    background-position: left 11.5px center;
+    background-repeat: no-repeat;
+    background-size: 17px;
+}
+.outerForm form .formIn input.password {
+    background: url(./images/password.svg);
+    background-position: left 11.5px center;
+    background-repeat: no-repeat;
+    background-size: 17px;
+}
+
+.outerForm form .formIn input[type="file"]{
+    padding-top: 8px;
+    padding-left: 2vh;
+}
+
+.userProfile .imgChange .imgIn input::-webkit-file-upload-button{
+    background: rgb(56, 103, 186);
+    color: white;
+    border: 0;
+    outline: 0;
+    border-radius: 5px;
+    font-weight: 500;
+    padding: 5px 10px;
+    cursor: pointer;
+}
+
+.outerForm form .formIn button{
+    border: 0;
+    outline: none;
+    background: #0056b3;
+    color: white;
+    font-size: 17px;
+    font-weight: 600;
+    padding: 12px 0;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+.outerForm form .formIn button:hover{
+    opacity: 0.9;
+}
+
+.outerForm form .formIn a{
+    color: #3675b8;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+@media screen and (max-width: 700px){
+    .outerForm form{
+        background: rgb(255, 255, 255);
+    }
+    .outerForm form .formIn h1{
+        text-align: center;
+        font-size: 35px;
+    }
+    .outerForm form .formIn input{
+        padding: 0 4vh
+    };
+    .outerForm form{
+        border: 0;
+        border-radius: 0;
+        width: 100%;
+    }
+    .outerForm form .formIn{
+        width: 100%;
+    }
+}
