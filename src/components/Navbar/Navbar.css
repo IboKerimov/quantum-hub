@@ -61,10 +61,13 @@ nav ul li .account img{
     width: 35px;
     height: 35px;
     border-radius: 100%;
+    object-fit: cover;
+    object-position: center;
 }
 
 
-nav ul .accMenu{
+
+.accMenu{
     position: absolute;
     background: white;
     border-radius: 10px;
@@ -79,37 +82,56 @@ nav ul .accMenu{
     justify-items: center;
     overflow: hidden;
     opacity: 0;
+    visibility: hidden;
     transition: 0.15s;
+    width: 120px;
 }
-nav ul .accMenuOpen{
+.accMenuOpen{
     opacity: 1;
+    visibility: visible;
 }
-nav ul .accMenu a{
+.accMenu a:first-child{
+    background: rgb(82, 96, 204);
+    color: white;
+}
+.accMenu a{
     color: rgb(0, 0, 255);
     font-weight: 550;
     text-decoration: none;
     font-size: 14.5px;
-    width: 100px;
+    width: 100%;
     height: 30px;
     display: flex;
     align-items: center;
     padding-left: 10px;
-    border-radius: 3px;
 }
-nav ul .accMenu a::first-letter{
-    display: none;
-}
-nav ul .accMenu a:hover{
+.accMenu a:not(:first-child):hover{
     background: rgba(56, 56, 190, 0.082);
 }
 
-nav .toggle{
+
+
+nav .btns{
     display: none;
-    background: none;
+    gap: 9px;
+}
+nav .btns .toggle,
+nav .btns .toggle a{
+    display: flex;
     border: 0;
+    background: none;
     outline: 0;
     font-size: 22px;
     cursor: pointer;
+    align-items: center;
+}
+nav .btns .toggle img{
+    align-items: center;
+    border: 2px solid rgb(61, 110, 215);
+    border-radius: 100%;
+    width: 30px;
+    height: 30px;
+    object-fit: cover;
 }
 
 /* Overlay */
@@ -162,6 +184,65 @@ nav .toggle{
 }
 
 
+.mobile-nav{
+    position: fixed;
+    bottom: 20px;
+    left: 0;
+    right: 0;
+    justify-content: center;
+    align-items: center;
+    display: none;
+}
+.mobile-nav .inner{
+    background: #fff;
+    box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    -webkit-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    -moz-box-shadow: 0px 0px 7px 1px rgba(0,0,0,0.25);
+    border-radius: 100px;
+    height: 55px;
+}
+.mobile-nav .inner ul{
+    display: flex;
+    overflow: hidden;
+    align-items: center;
+    overflow: hidden;
+}
+.mobile-nav .inner ul a{
+    color: rgb(61, 110, 215);
+    font-size: 20px;
+    height: 100%;
+    padding: 0 20px;
+    height: 55px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+    border-radius: 3px;
+    transition: 0.2s;
+    border: 1px solid rgba(226, 226, 226, 0.773);
+}
+.mobile-nav .inner ul a:first-child{
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+.mobile-nav .inner ul a:last-child{
+    border-top-right-radius: 100px;
+    border-bottom-right-radius: 100px;
+}
+
+.mobile-nav .inner ul a img{
+    width: 32px;
+    height: 32px;
+    border: 2px solid rgb(61, 110, 215);
+    border-radius: 100%;
+}
+.mobile-nav .inner ul .clicked {
+    color: white;
+    background: rgb(61, 110, 215);
+    border: 0;
+}
+    
+
+
 @media screen and (max-width: 710px){
     nav{
         padding: 0 40px 0 20px;
@@ -189,6 +270,13 @@ nav .toggle{
     nav .logo img{
         width: 170px;
     }
+    nav .btns{
+        display: flex;
+    }
     nav ul{ display: none; }
     nav .toggle{ display: block; }
+    .mobile-nav{
+        display: flex;
+    }
 }
+

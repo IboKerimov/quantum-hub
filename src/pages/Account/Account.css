@@ -1,3 +1,21 @@
+.pentosqricon{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 0;
+    outline: 0;
+    color: white;
+    width: 19px;
+    height: 19px;
+    background-color: rgb(56, 103, 186);
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 10px;
+    margin-left: 10px;
+}
+
+
+
 .userProfile{
     padding: 20px;
 }
@@ -20,48 +38,26 @@
 }
 .userProfile .accIn .top .top-left img{
     width: 90px;
+    height: 90px;
     border-radius: 100%;
-    border: 2px solid blue;
+    border: 2px solid rgb(59, 121, 230);
     position: relative; 
+    object-fit: cover;
+    object-position: center;
 }
 .userProfile .accIn .top .top-left img:hover{
     filter: blur(1px);
-}
-.userProfile .accIn .top .top-left span{
-    color: white;
-    background: rgb(56, 103, 186);
-    width: 20px;
-    height: 20px;
-    border-radius: 5px;
-    font-size: 12px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin-left: -3px;
 }
 
 
 .userProfile .accIn .top .top-right {
     display: flex;
     flex-direction: column;
-    gap: 5px;
 }
 .userProfile .accIn .top .top-right h1{
     display: flex;
     align-items: center;
-    gap: 10px;
     color: rgb(52, 92, 162);
-}
-.userProfile .accIn .top .top-right button{
-    border: 0;
-    outline: 0;
-    color: white;
-    width: 19px;
-    height: 19px;
-    background-color: rgb(56, 103, 186);
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 9px;
 }
 .userProfile .accIn .top .top-right p{
     color: rgb(52, 92, 162);
@@ -69,9 +65,41 @@
 }
 
 
+.userProfile .actions{
+    display: flex;
+    gap: 10px;
+    padding: 0 10px;
+}
+.userProfile .actions .btn{
+    border: 0; outline: none;
+    color: white;
+    font-weight: 500;
+    border-radius: 10px;
+    font-size: 13px;
+    text-decoration: none;
+    padding: 8px 13px;
+    display: flex;
+    width: max-content;
+    transition: 0.15s;
+}
+
+.userProfile .actions .delete{
+    background: red;
+}
+.userProfile .actions .delete:hover{
+    background: rgb(152, 39, 39);
+}
+.userProfile .actions .reset{
+    background: rgb(44, 65, 226);
+}
+.userProfile .actions .reset:hover{
+    background: rgb(33, 43, 119);
+}
+
 @media screen and (max-width: 500px) {
     .userProfile .accIn .top .top-left img{
-        width: 60px;
+        width: 65px;
+        height: 65px;
     }
     .userProfile .accIn .top .top-left span{
         width: 15px;
@@ -79,15 +107,13 @@
         font-size: 8px;
     }
     .userProfile .accIn .top .top-right h1{
-        font-size: 26px;
+        font-size: 17px;
     }
     .userProfile .accIn .top .top-right p{
-        font-size: 13px;
+        font-size: 12px;
     }
 }
 
-
-/* Image Change */
 
 .userProfile .imgChange{
     display: flex;
@@ -148,7 +174,7 @@
     outline: none;
     background: #0056b3;
     color: white;
-    font-size: 14px;
+    font-size: 15px;
     font-weight: 600;
     padding: 8px 10px;
     border-radius: 10px;
@@ -157,4 +183,111 @@
 }
 .userProfile .imgChange .imgIn button:hover{
     opacity: 0.9;
+}
+
+
+
+hr{
+    margin: 15px 0;
+}
+
+
+.userProfile .section .user-details{
+    display: flex;
+    justify-content: space-around;
+}
+.userProfile .section .user-details .detail{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.userProfile .section .user-details .detail span:first-child{
+    font-weight: 600;
+    font-size: 19px;
+    color: rgb(59, 121, 230);
+}
+
+
+
+
+.userProfile .section h1{
+    color: rgb(56, 103, 186);
+    margin-bottom: 10px;
+}
+.userProfile .section .bio-content{
+    background: #f7f7f7;
+    border-radius: 15px;
+    padding: 20px;
+}
+
+.userProfile .section .bio-content ul,
+.userProfile .section .bio-content ol{
+    padding: 5px 0 5px 25px;
+}
+
+.addBio{
+    position: fixed;
+    top: 0;
+    left: 0;
+    bottom: 0;
+    right: 0;
+    z-index: 99999;
+    transform: translateY(100%);
+    transition: 0.25s;
+}
+.addBioOpen{
+    transform: translateY(0);
+}
+
+
+.AddBio{
+    margin-top: 10px;
+    border-top: 3px solid rgb(44, 99, 218);
+    border-radius: 10px;
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    z-index: 99999;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: white;
+    padding: 10px;
+}
+  
+.AddBio .closeBtn{
+    margin-bottom: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+.AddBio .closeBtn button{
+    border: 0;
+    outline: 0;
+    color: white;
+    background: rgb(44, 99, 218);
+    width: 100px;
+    height: 35px;
+    border-radius: 5px;
+    font-size: 15px;
+    font-weight: 500;
+    cursor: pointer;
+    transition: 0.1s;
+}
+.AddBio .closeBtn button:last-child{
+    background-color: red;
+}
+.AddBio .closeBtn button:hover{
+    opacity: 0.8;
+}
+
+@media screen and (max-width: 500px){
+    .userProfile .section h1{
+        font-size: 20px;
+    }
+    .userProfile .section .bio-content{
+        padding: 13px;
+        font-size: 12.5px;
+        border-radius: 6px;
+    }
 }

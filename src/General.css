@@ -1,5 +1,53 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
+.signup-transition-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .signup-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  
+  .signup-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .signup-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.5s;
+  }
+
+  /* Login.css */
+
+.login-transition-enter {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  
+  .login-transition-enter-active {
+    opacity: 1;
+    transform: translateY(0);
+    transition: 0.5s;
+  }
+  
+  .login-transition-exit {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  
+  .login-transition-exit-active {
+    opacity: 0;
+    transform: translateY(-20px);
+    transition: 0.5s;
+  }
+  
+  
+
 *{
     padding: 0;
     margin: 0;
@@ -13,6 +61,7 @@ body{
 @media screen and (max-width: 630px){
     body{
         padding-top: 80px;
+        padding-bottom: 90px;
     }
 }
 
@@ -43,6 +92,7 @@ main .posts{
     min-width: 260px;
     max-width: 260px;
     height: 365px;
+    overflow: hidden;
 }
 .post .top{
     text-align: center;
@@ -55,13 +105,12 @@ main .posts{
 }
 .post .top .title{
     font-weight: 650; 
-    font-size: 25px; 
+    font-size: 24px; 
     color: #3c352d;
 }
 .post .top .category{
     font-weight: 600;
     font-size: 12px;
-    text-transform: uppercase;
     color: #4f4a44;
 }
 .post .bottom{
@@ -82,6 +131,7 @@ main .posts{
 }
 .post .read-all {
     display: inline-block;
+    position: relative;
     padding: 7px 16px;
     background-color: #007bff;
     color: white;
@@ -91,6 +141,7 @@ main .posts{
     font-size: 14px;
     width: 130px;
     align-self: center;
+    overflow: hidden;
 }
 
 .post .read-all:hover {
@@ -184,12 +235,11 @@ main .posts{
     background: white;
     padding-left: 5vh;
 }
-.outerForm form .formIn input.name {
+.outerForm form .formIn input.username {
     background: url(./images/user.svg);
     background-position: left 10px center;
     background-repeat: no-repeat;
     background-size: 18px;
-
 }
 .outerForm form .formIn input.email {
     background: url(./images/email.svg);
@@ -245,13 +295,15 @@ main .posts{
 @media screen and (max-width: 700px){
     .outerForm form{
         background: rgb(255, 255, 255);
+        border: 0;
+        border-radius: 0;
     }
     .outerForm form .formIn h1{
         text-align: center;
         font-size: 35px;
     }
     .outerForm form .formIn input{
-        padding: 0 4vh
+        padding: 0 4.5vh
     };
     .outerForm form{
         border: 0;

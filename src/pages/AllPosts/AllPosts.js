@@ -90,10 +90,10 @@ const AllPosts = () => {
                         filteredPosts.map((post) => (
                             <div className="post" key={post.id}>
                                 <div className="top">
-                                    <img src={post.image_url} alt={post.title} />
+                                    <img src={post.imageUrl} alt={post.title} />
                                     <div className="t-right">
                                         <div className="title">{post.title}</div>
-                                        <div className="category">{post.category}</div>
+                                        <div className="category">@{post.author}</div>
                                     </div>
                                 </div>
                                 <div className="bottom">

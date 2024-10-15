@@ -37,11 +37,11 @@ const Filter = ({ setSearchTerm, setSortTerm, setOrderingTerm }) => {
     }, [category, setSortTerm]);
 
     useEffect(() => {
-        setSearchTerm(search);
+        setSearchTerm(search.toLowerCase());
     }, [search, setSearchTerm]);
 
     useEffect(() => {
-        setOrderingTerm(orderingBy);
+        setOrderingTerm(orderingBy.toLowerCase());
     }, [orderingBy, setOrderingTerm]);
 
     return (
@@ -112,13 +112,13 @@ const Filter = ({ setSearchTerm, setSortTerm, setOrderingTerm }) => {
                             <input 
                                 type="radio" 
                                 name="ordering" 
-                                value={"clicks"} 
+                                value={"Clicks"} 
                                 checked={orderingBy === "clicks"}
                                 onChange={() => {
                                     setOrderingBy("clicks");
                                     setOrderByClicked(false);
                                 }} 
-                            /> By the Number of Clicks
+                            /> By Clicks
                         </label>
                     </li>
 

@@ -51,8 +51,15 @@
     margin: 8px 0;
 }
 
+
 .pxBeVisible{
     display: none;
+}
+.PostGeneral .content .audio-load{
+    margin: 5px 0;
+    background: #eaeaea;
+    padding: 8px 10px;
+    border-radius: 10px;
 }
 
 @media screen and (max-width: 1000px) {

@@ -49,6 +49,13 @@ const Home = () => {
         });
     };
 
+    // Function to strip HTML tags
+    const stripHtmlTags = (html) => {
+        const tmp = document.createElement("DIV");
+        tmp.innerHTML = html;
+        return tmp.textContent || tmp.innerText || "";
+    };
+
     useEffect(() => {
         let filtered = posts;
 
@@ -71,22 +78,19 @@ const Home = () => {
             <header>
                 <div className="header-in">
                     <h1>
-                        Read about <span>Galileo Galile</span>
+                        Read about <span>Paul Dirac</span>
                     </h1>
                     <p>from</p>
                     <h1>
-                        <Link to={"/post/Galileo-Galilei"}>HERE</Link>
+                        <Link to={"/post/Paul-Dirac"}>HERE</Link>
                     </h1>
                 </div>
             </header>
             <main>
-
-
                 <div className="posts-menu">
                     <h1>Featured Posts</h1>
                     <Link to={"/all-posts"}>See All Posts →</Link>
                 </div>
-
 
                 <div className="posts">
                     {loading ? (
@@ -95,32 +99,31 @@ const Home = () => {
                         filteredPosts.map((post) => (
                             <div className="post" key={post.id}>
                                 <div className="top">
-                                    <img src={post.image_url} alt={post.title} />
+                                    <img src={post.imageUrl} alt={post.title} />
                                     <div className="t-right">
                                         <div className="title">{post.title}</div>
-                                        <div className="category">{post.category}</div>
+                                        <div className="category">@{post.author}</div>
                                     </div>
                                 </div>
                                 <div className="bottom">
-                                {
-                                post.content && (
-                                    <p dangerouslySetInnerHTML={{ __html: post.content.substr(0, 230) +"..." }}></p>
-                                )}
-                                {/* Add click handler */}
-                                <Link 
-                                    to={"/post/" + post.id} 
-                                    className="read-all"
-                                    onClick={() => handlePostClick(post.id)}
-                                >
-                                    Read All
-                                </Link>
+                                    {post.content && (
+                                        <p>{stripHtmlTags(post.content).substring(0, 190) + "..."}</p> // Change here
+                                    )}
+                                    {/* Add click handler */}
+                                    <Link 
+                                        to={"/post/" + post.id} 
+                                        className="read-all"
+                                        onClick={() => handlePostClick(post.id)}
+                                    >
+                                        Read All
+                                    </Link>
                                 </div>
                             </div>
                         ))
                     ) : (
                         <div className="not-class">
-                        <div><strong>No post</strong> found</div>
-                        <button onClick={() => {refreshFilters()}} className="refreshFilters">Refresh the filters</button>
+                            <div><strong>No post</strong> found</div>
+                            <button onClick={() => {refreshFilters()}} className="refreshFilters">Refresh the filters</button>
                         </div>
                     )}
                 </div>
