@@ -5,13 +5,13 @@ import { getAnalytics } from "firebase/analytics";
 import { getAuth } from "firebase/auth";
 
 const firebaseConfig = {
-  apiKey: "AIzaSyDWZKykg9jmeZQ5WndWCrk1wVWd4cZIMNc",
-  authDomain: "quantum-hub-202ec.firebaseapp.com",
-  databaseURL: "https://quantum-hub-202ec-default-rtdb.firebaseio.com",
-  projectId: "quantum-hub-202ec",
-  storageBucket: "quantum-hub-202ec.appspot.com",
-  messagingSenderId: "685097069069",
-  appId: "1:685097069069:web:5fabab1cbca41e62dcc344"
+  apiKey: "You must get yours from your firebase app",
+  authDomain: "You must get yours from your firebase app",
+  databaseURL: "You must get yours from your firebase app",
+  projectId: "You must get yours from your firebase app",
+  storageBucket: "You must get yours from your firebase app",
+  messagingSenderId: "You must get yours from your firebase app",
+  appId: "You must get yours from your firebase app"
 };
 
 const app = initializeApp(firebaseConfig);
